@@ -139,3 +139,4 @@ Dans `simu_env.py` :
 ```bash
 rm simulation_results.csv
 ```
+![Démo de la simulation](sonar.gif)
