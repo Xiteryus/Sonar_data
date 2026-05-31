@@ -86,6 +86,7 @@ Dans RViz, une fois ouvert :
 3. En haut à gauche, dans **Global Options**, mettre **Fixed Frame** sur `map`.
 
 ---
+![Démo de la simulation](Sonar.gif)
 
 ## 5. Comment lire l'affichage
 
@@ -139,4 +140,3 @@ Dans `simu_env.py` :
 ```bash
 rm simulation_results.csv
 ```
-![Démo de la simulation](Sonar.gif)
