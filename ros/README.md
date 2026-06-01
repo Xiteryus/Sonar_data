@@ -1,6 +1,6 @@
 # Détecteur Sonar Mine / Rocher (ROS 2 + RViz)
 
-Simulation d'un sonar qui balaye un environnement et utilise une IA (SVM)
+Simulation d'un sonar qui balaye un environnement et utilise le modèle SVM
 pour classer chaque obstacle détecté : **Mine** ou **Rocher**.
 
 ---
@@ -17,7 +17,7 @@ pour classer chaque obstacle détecté : **Mine** ou **Rocher**.
 | `sonar_svm_model.pkl` | Le modèle entraîné |
 | `sonar_scaler.pkl` | Le normaliseur des données |
 | `simu_env.py` | Simulateur : génère les obstacles et le faisceau sonar |
-| `ros_2d.py` | L'IA : classe les détections et les affiche |
+| `ros_2d.py` | Le modèle : classe les détections et les affiche |
 
 ---
 
@@ -108,7 +108,7 @@ Dans RViz, une fois ouvert :
 2. Onglet **By topic**, ajouter les affichages suivants :
    - `/environment` → **MarkerArray** (les vrais obstacles)
    - `/sonar_beam_viz` → **Marker** (le faisceau du sonar)
-   - `/sonar/detections_2d_viz` → **Marker** (les détections de l'IA)
+   - `/sonar/detections_2d_viz` → **Marker** (les détections du modèle)
 3. En haut à gauche, dans **Global Options**, mettre **Fixed Frame** sur `map`.
 
 ---
@@ -122,13 +122,13 @@ Dans RViz, une fois ouvert :
 | 🔴 Rouge | C'est vraiment une Mine |
 | 🔵 Bleu | C'est vraiment un Rocher |
 
-**Les cylindres = ce que l'IA a prédit :**
+**Les cylindres = ce que le modèle a prédit :**
 
 | Couleur | Signification |
 |---|---|
-| 🔴 Rouge | L'IA pense que c'est une Mine |
-| 🔵 Bleu | L'IA pense que c'est un Rocher |
-| 🟡 Jaune | **Erreur** : l'IA s'est trompée |
+| 🔴 Rouge | le modèle pense que c'est une Mine |
+| 🔵 Bleu | le modèle pense que c'est un Rocher |
+| 🟡 Jaune | **Erreur** : le modèle s'est trompée |
 
 Le faisceau cyan tourne et « scanne » les obstacles un par un.
 
