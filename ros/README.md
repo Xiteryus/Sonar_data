@@ -80,7 +80,7 @@ Ouvrir **3 terminaux**. Dans chacun, faire d'abord :
 source /opt/ros/humble/setup.bash
 ```
 
-**Terminal 1 — L'IA (à lancer en premier)** :
+**Terminal 1 — Le modèle (à lancer en premier)** :
 
 ```bash
 python3 ros_2d.py
