@@ -48,3 +48,9 @@ cd ros
 ```
 
 Vous y trouverez un README.md spécifique qui détaille l'architecture logicielle et les commandes nécessaires au lancement des nœuds ROS.
+
+## Démonstration
+
+[![Démonstration de la simulation](https://img.youtube.com/vi/LH5Gp3JCK2A/hqdefault.jpg)](https://www.youtube.com/watch?v=LH5Gp3JCK2A)
+
+> Cliquez sur l'image pour voir la vidéo de la simulation sur YouTube.
