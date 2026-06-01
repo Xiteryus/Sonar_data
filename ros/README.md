@@ -21,7 +21,33 @@ pour classer chaque obstacle détecté : **Mine** ou **Rocher**.
 
 ---
 
-## 2. Préparation (à faire une seule fois)
+## 2. Prérequis
+
+Le projet nécessite **ROS 2 Humble** (sur Ubuntu 22.04) ainsi que quelques
+bibliothèques Python.
+
+**ROS 2 Humble** : suivre la documentation officielle si ce n'est pas déjà
+installé → https://docs.ros.org/en/humble/Installation.html
+
+**Bibliothèques Python** : installer l'ensemble des dépendances avec :
+
+```bash
+pip install pandas numpy scikit-learn joblib matplotlib
+```
+
+> ⚠️ Le modèle (`.pkl`) doit être généré avec la **même version de
+> scikit-learn** que celle utilisée pour l'inférence. En cas d'avertissement
+> de version, relancez `machine_learning.py` sur votre machine.
+
+**Outils RViz et visualisation** (normalement inclus avec ROS 2) :
+
+```bash
+sudo apt install ros-humble-rviz2 ros-humble-rqt-graph
+```
+
+---
+
+## 3. Préparation (à faire une seule fois)
 
 Avant chaque commande, charger l'environnement ROS :
 
@@ -46,7 +72,7 @@ python3 machine_learning.py
 
 ---
 
-## 3. Lancer la simulation
+## 4. Lancer la simulation
 
 Ouvrir **3 terminaux**. Dans chacun, faire d'abord :
 
@@ -74,7 +100,7 @@ rviz2
 
 ---
 
-## 4. Configuration de RViz
+## 5. Configuration de RViz
 
 Dans RViz, une fois ouvert :
 
@@ -87,8 +113,7 @@ Dans RViz, une fois ouvert :
 
 ---
 ![Démo de la simulation](Sonar.gif)
-
-## 5. Comment lire l'affichage
+## 6. Comment lire l'affichage
 
 **Les cubes = la vérité (vrais obstacles) :**
 
@@ -109,7 +134,7 @@ Le faisceau cyan tourne et « scanne » les obstacles un par un.
 
 ---
 
-## 6. Fonctionnement
+## 7. Fonctionnement
 
 - Toutes les **10 secondes**, 10 nouveaux obstacles sont générés au hasard.
   Les anciens cubes **et** les anciens cercles de détection sont effacés
@@ -120,7 +145,7 @@ Le faisceau cyan tourne et « scanne » les obstacles un par un.
 
 ---
 
-## 7. Réglages utiles
+## 8. Réglages utiles
 
 Dans `simu_env.py` :
 
@@ -131,7 +156,7 @@ Dans `simu_env.py` :
 
 ---
 
-## 8. Arrêter / Réinitialiser
+## 9. Arrêter / Réinitialiser
 
 - **Arrêter** : `Ctrl + C` dans chaque terminal.
   (Le message `rcl_shutdown already called` à la fermeture est sans gravité.)
