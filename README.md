@@ -33,6 +33,8 @@ pip install -r requirements.txt
 jupyter notebook ML_dev/main.ipynb
 ```
 
+- L'exécution de cette commande va démarrer un serveur local. Si votre navigateur web ne s'ouvre pas automatiquement, un lien http://localhost:8888/ apparaîtra dans votre terminal. Cliquez simplement sur ce lien pour accéder à l'interface et voir les résultats.
+
 - Le code est également disponible sur [Google Colab](https://colab.research.google.com/drive/1eQLsB-q40bpODR6FsR-rhZisyvaHqOdb?usp=sharing)
 
 
